@@ -2,8 +2,8 @@ public class DieN {
     private int value;
     private int sides;
     public DieN(int sides) {
-        this.roll();
         this.sides = sides;
+        this.roll();
     }
 
     public void roll() {
