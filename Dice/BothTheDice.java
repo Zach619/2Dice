@@ -1,20 +1,27 @@
 public class BothTheDice {
-    private int Die1;
-    private int Die2;
+    private Die6 Die1;
+    private Die6 Die2;
     public BothTheDice() {
-        roll();
+        Die1 = new Die6;
+        Die2 = new Die6;
+        this.roll();
     }
+      public int getValue() {
+        return Die1.getValue()+Die2.getvalue();
+    }
+    public int getValue(int dieNumber) {
+        if(dieNumber == 1) {
+            return this.die1.getValue();
+        }else if(dieNumber == 2) {
+            return this.die2.getValue();
+        }   
+        }
     public void roll() {
-        Die1 = (int)(Math.random() * 6 + 1);
-        Die2 = (int)(Math.random() * 6 + 1);
+        this.Die1.roll();
+        this.Die2.roll();
     }
-    public int getvalueDie1() {
-        return Die1;
-    }
-    public int getvalueDie2() {
-        return Die2;
-    }
-    public int CombineBoth() {
-        return Die1 + Die2;
+    public int rollandgetValue() {
+        this.roll();
+        return this.getValue();
     }
 }
